@@ -38,7 +38,7 @@ class TriangleClassifierTest {
 
     @Test
     @DisplayName("Tam giac thuong SCALENE")
-    void classifyScalene() {
+    void classify3And4And5() {
         int sideA = 3;
         int sideB = 4;
         int sideC = 5;
