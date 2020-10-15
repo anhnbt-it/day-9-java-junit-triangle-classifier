@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 class TriangleClassifierTest {
     @Test
-    @DisplayName("Tam giac deu")
+    @DisplayName("Tam giac deu EQUILATERAL")
     void classifyEquilateral() {
         int sideA = 2;
         int sideB = 2;
@@ -24,7 +24,7 @@ class TriangleClassifierTest {
     }
 
     @Test
-    @DisplayName("Tam giac can")
+    @DisplayName("Tam giac can ISOSCELES")
     void classifyIsosceles() {
         int sideA = 2;
         int sideB = 2;
@@ -35,4 +35,31 @@ class TriangleClassifierTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    @DisplayName("Tam giac thuong SCALENE")
+    void classifyScalene() {
+        int sideA = 3;
+        int sideB = 4;
+        int sideC = 5;
+
+        TriangleType expected = TriangleType.SCALENE;
+        TriangleType actual = TriangleClassifier.classify(sideA, sideB, sideC);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    @DisplayName("Khong phai tam giac")
+    void classifyNotATriangle() {
+        int sideA = 8;
+        int sideB = 2;
+        int sideC = 3;
+
+        TriangleType expected = TriangleType.NOT_A_TRIANGLE;
+        TriangleType actual = TriangleClassifier.classify(sideA, sideB, sideC);
+
+        assertEquals(expected, actual);
+    }
+
 }
