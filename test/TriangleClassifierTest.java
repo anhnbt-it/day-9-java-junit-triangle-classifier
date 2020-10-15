@@ -62,4 +62,30 @@ class TriangleClassifierTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    @DisplayName("-1 2 1")
+    void classify1And2And1() {
+        int sideA = -1;
+        int sideB = 2;
+        int sideC = 1;
+
+        TriangleType expected = TriangleType.NOT_A_TRIANGLE;
+        TriangleType actual = TriangleClassifier.classify(sideA, sideB, sideC);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    @DisplayName("0 1 1")
+    void classify0And1And1() {
+        int sideA = 0;
+        int sideB = 1;
+        int sideC = 1;
+
+        TriangleType expected = TriangleType.NOT_A_TRIANGLE;
+        TriangleType actual = TriangleClassifier.classify(sideA, sideB, sideC);
+
+        assertEquals(expected, actual);
+    }
+
 }
