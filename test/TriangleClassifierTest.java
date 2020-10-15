@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class TriangleClassifierTest {
     @Test
     @DisplayName("Tam giac deu EQUILATERAL")
-    void classifyEquilateral() {
+    void classify2And2And2() {
         int sideA = 2;
         int sideB = 2;
         int sideC = 2;
