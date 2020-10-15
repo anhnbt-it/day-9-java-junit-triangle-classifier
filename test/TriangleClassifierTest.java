@@ -25,7 +25,7 @@ class TriangleClassifierTest {
 
     @Test
     @DisplayName("Tam giac can ISOSCELES")
-    void classifyIsosceles() {
+    void classify2And2And3() {
         int sideA = 2;
         int sideB = 2;
         int sideC = 3;
