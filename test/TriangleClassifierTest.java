@@ -51,7 +51,7 @@ class TriangleClassifierTest {
 
     @Test
     @DisplayName("Khong phai tam giac")
-    void classifyNotATriangle() {
+    void classify8And2And3() {
         int sideA = 8;
         int sideB = 2;
         int sideC = 3;
